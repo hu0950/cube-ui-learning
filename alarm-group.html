@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警组添加</title>
+    <!-- 引入头部的JS文件 -->
+    <script type="text/javascript">
+        document.write('<script src="http://bigdata-test.xiaojukeji.com/bigdata_common_fe/static/js/components/menuHeader.js?t=' + new Date().getTime() + '"><' + '/script>');
+    </script>
+    <!--#include file="common/head.html"-->
+</head>
+<body>
+    <div id="common-header"></div> <!-- 添加顶部导航的标签，直接拷贝该代码即可 -->
+    <div id="common-sidebar-wrap"></div> <!-- 添加左侧目录树的标签，直接拷贝该代码即可 -->
+    <div id="common-container"> <!-- 将原项目中显示正文的地方，用该DIV包裹 -->
+        <div class="body-wrap ng-scope bd_DW"><div class="dic-body-wrap dic-create-page ng-scope">
+            <div class="didi-title ng-binding">报警组信息</div>
+            <div class="form-wrap">
+                <form role="form" class="form-horizontal ng-pristine ng-invalid ng-invalid-required">
+                    <div class="didi-row">
+                        <div class="form-group clearfix col-sm-12">
+                            <label class="control-label pull-left">名称：</label>
+                            <div class="col-sm-8">
+                                <input type="text" required="" class="form-control didi-input ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="didi-row">
+                        <div class="form-group clearfix col-sm-12">
+                            <label class="control-label pull-left">描述：</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control didi-input ng-pristine ng-untouched ng-valid ng-empty">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="didi-row">
+                        <div class="form-group clearfix col-sm-12">
+                            <label class="control-label pull-left">报警组成员添加： </label>
+                            <div class="col-sm-10">
+                                <button type="button" class="didi-btn didi-btn-highlight didi-mr-20 J_add" data-toggle="modal" data-target="#addDialog"><i class="fa fa-plus margin-right-8"></i>添加报警组成员</button>
+                                <table class="table table-bordered" style="margin: 10px 0;">
+                                    <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>手机号</th>
+                                        <th>部门</th>
+                                        <th>邮箱</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="J_addListBody">
+                                    <tr class="J_tip">
+                                        <td colspan = "5" style="text-align: center;">暂无内容</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="didi-row text-center">
+                        <button type="button" class="didi-btn didi-btn-highlight didi-mr-20 J_saveAdd">保存</button>
+                        <a class="didi-btn didi-btn-ok J_returnList" href="">返回首页</a>
+                    </div>
+                </form>
+            </div>
+        </div></div>
+    </div>
+    <!--模态框-->
+    <div class="modal fade" id="addDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+             <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close J_close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">添加报警组成员</h4>
+                </div>
+                 <div class="modal-body">
+                     <form role="form" class="form-horizontal ng-pristine ng-invalid ng-invalid-required J_modalForm">
+                        <div class="didi-row">
+                            <div class="form-group clearfix col-sm-12">
+                                <label class="control-label pull-left">邮箱：</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <input type="text" class="didi-input ng-pristine ng-untouched ng-valid ng-empty width-260">
+                                        <div class="input-group-addon">@didichuxing.com</div>
+                                        <button type="button" class="didi-btn didi-btn-ok didi-mr-20 margin-left-30 J_saveAdd">查询</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--<label class="col-sm-2 control-label">邮箱</label>-->
+                            <!--<div class="col-sm-10">-->
+                                <!--<div class="input-group">-->
+                                    <!--<input type="text" class="form-control email-input J_searchContent">-->
+                                    <!--<div class="input-group-addon">@didichuxing.com</div>-->
+                                    <!--<button type="button" class="didi-btn didi-btn-ok didi-mr-20 J_saveAdd">查询</button>-->
+                                    <!--&lt;!&ndash;<button type="button" class="btn btn-primary query-email J_search" style="float: right;">查询</button>&ndash;&gt;-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>姓名</th>
+                                            <th>手机号</th>
+                                            <th>部门</th>
+                                            <th>邮箱</th>
+                                        </tr>
+                                    </thead>
+                                <tbody class="J_searchResultBody">
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                 </div>
+                <div class="modal-footer didi-row">
+                    <button type="button" class="didi-btn didi-btn-cancel dlg-btn J_cancel" data-dismiss="modal">取消</button>
+                    <button type="button" class="didi-btn didi-btn-highlight dlg-btn J_confirm" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 引入尾部的JS文件 -->
+    <script type="text/javascript">
+        document.write('<script src="http://bigdata-test.xiaojukeji.com/bigdata_common_fe/static/js/components/menuFooter.js?t=' + new Date().getTime() + '"><' + '/script>');
+    </script>
+</body>
+</html>
+
+<!--<div class="bd_DW">-->
+<!--<div class="block-title">报警组信息</div>-->
+<!--<div class="block-content">-->
+<!--<div data-module-path="alarm/group/add/form">-->
+<!--<form class="form-horizontal J_operListForm">-->
+<!--<div class="form-group">-->
+<!--<label class="col-sm-2 control-label"> 名称 </label>-->
+<!--<div class="col-sm-10">-->
+<!--<input type="text" name="group_name" class="form-control J_name" data-validate-name="group_name" value="">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<label class="col-sm-2 control-label"> 描述 </label>-->
+<!--<div class="col-sm-10"><input class="form-control J_desc" type="text" name="group_description" value="">-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;modal start&ndash;&gt;-->
+<!--<div class="form-group">-->
+<!--<label class="col-sm-2 control-label"> 报警组成员 </label>-->
+<!--<div class="col-sm-10">-->
+<!--<button type="button" class="btn btn-primary btn-sm add-receiver J_add" data-toggle="modal" data-target="#addDialog">设置报警组成员</button>-->
+<!--<div class="form-group">-->
+<!--<div class="col-sm-12">-->
+<!--<table class="table table-bordered" style="margin: 10px 0;">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>姓名</th>-->
+<!--<th>手机号</th>-->
+<!--<th>部门</th>-->
+<!--<th>邮箱</th>-->
+<!--<th>操作</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody class="J_addListBody">-->
+<!--<tr class="J_tip">-->
+<!--<td colspan = "5" style="text-align: center;">暂无内容</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="modal fade" id="addDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--<div class="modal-dialog" role="document">-->
+<!--<div class="modal-content">-->
+<!--<div class="modal-header">-->
+<!--<button type="button" class="close J_close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--<h4 class="modal-title" id="myModalLabel">添加报警组成员</h4>-->
+<!--</div>-->
+<!--<div class="modal-body">-->
+<!--<form class="form-horizontal J_modalForm">-->
+<!--<div class="form-group">-->
+<!--<label class="col-sm-2 control-label">邮箱</label>-->
+<!--<div class="col-sm-10">-->
+<!--<div class="input-group">-->
+<!--<input type="text" class="form-control email-input J_searchContent">-->
+<!--<div class="input-group-addon">@didichuxing.com</div>-->
+<!--<button type="button" class="btn btn-primary query-email J_search" style="float: right;">查询</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="form-group">-->
+<!--<div class="col-sm-12">-->
+<!--<table class="table table-bordered">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>姓名</th>-->
+<!--<th>手机号</th>-->
+<!--<th>部门</th>-->
+<!--<th>邮箱</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody class="J_searchResultBody">-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--<button type="button" class="btn btn-default J_cancel" data-dismiss="modal">取消</button>-->
+<!--<button type="submit" class="btn btn-primary J_confirm">确定</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;modal end&ndash;&gt;-->
+<!--<div class="form-group actions padding-bottom-30">-->
+<!--<label class="col-sm-5 control-label"></label>-->
+<!--<div class="col-sm-5">-->
+<!--<button type="button" class="btn btn-primary save J_saveAdd">保存</button>-->
+<!--<button type="button" class="btn btn-default cancel J_returnList">返回</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;<script type="text/javascript" src="/data_monitor/static/js/alarm_group.js"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;<script type="text/javascript">&ndash;&gt;-->
+<!--&lt;!&ndash;sendAjaxRequestEditInfo();&ndash;&gt;-->
+<!--&lt;!&ndash;</script>&ndash;&gt;-->
+<!--</div>-->

@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* color select */
+#dx_ui_color_selection{ border:1px solid #646464; background:#F0F0F0; float:left; position:absolute; z-index:10;}
+#dx_ui_color_selection .c_top{ overflow:hidden; padding:2px 0;}
+#dx_ui_color_selection .c_top .c_text{ width:70px; line-height:14px; height:20px; padding:2px 3px; float:left; margin-left:10px;}
+#dx_ui_color_cur{ background:none; width:50px; height:20px; float:left; border:1px solid #000000; margin:0 0 0 3px;}
+#dx_ui_color_selection .c_top .c_btn{ border:1px solid #707070; border-radius:3px; float:right; background:#DEF7E0;}
+#dx_ui_color_table table td{ border-left:1px solid #000; border-top:1px solid #000; width:12px; height:12px;}
+#dx_ui_color_table table .hover{ border-left:1px solid #ccc; border-top:1px solid #ccc;}
+#dx_ui_color_table .td td{ border-left:none 0;}
+.font-color-select{
+	display:inline-block;
+	width:18px;
+	height:20px;
+	border:1px solid #000;
+	overflow:hidden;
+	vertical-align:middle; 
+	position:relative; 
+	background-color:#00FF00;
+}
+.font-color-corner{display:block; width:5px; height:5px; background:#fff; border-left:1px solid #000; border-top:1px solid #000; position:absolute; right:0px; bottom:0px;}
+/* region select */
+#dx_ui_region_selection{ border:1px solid #CBCBCB; width:480px; font-size:12px; position:absolute; z-index:1003; background:#EAF7EA;}
+.dx_ui_region_pane{ padding:10px; border-bottom:1px solid #CBCBCB;max-height:300px;overflow: auto;}
+#dx_ui_region_selection .title{ font-weight:900; padding:5px 0;}
+#dx_ui_region_selection .item_row{ padding:0 0 0 1em; overflow:hidden;}
+.dx_ui_region_btn{ background:#EEEFEE; border-top:1px solid #FFFFFF; text-align:right;}
+.dx_ui_region_btn input{border:1px solid #2F5996; border-radius:4px; background:#6C97E0; color:#fff; padding:4px 6px; margin:3px; display:inline-block; width:80px;}
+
+/* time select */
+.dx_ui_time_selection{ background:#fff; border:1px solid #5A9EE6; font-size:12px; width:480px; padding:3px; position:absolute; z-index:10; display:none;}
+.dx_ui_time_opt{ overflow:hidden; line-height:30px; height:30px;}
+.dx_ui_time_opt a{ margin:0 10px 0 3px; float:left; text-decoration:none;}
+.dx_ui_time_opt span{ float:right; text-indent:8px; margin:0 10px;}
+.dx_ui_time_selection .dx_ui_table th{ background:url(time_arrow.png) no-repeat 3px -10px; height:13px; width:20px; cursor:pointer;}
+.dx_ui_time_selection .dx_ui_table th.cur{ background-position:3px 1px;}
+.dx_ui_time_selection .dx_ui_table .dx_ui_first_td{ width:130px; background:none; border-bottom:none; color:#39773D; cursor:default;}
+.dx_ui_time_selection .dx_ui_table td{ border-bottom:1px dashed #5A9EE6; line-height:25px; text-align:center; cursor:pointer;}
+.dx_ui_tf label,.dx_ui_zt label{ float:left; width:14px; height:14px; background:#589DEE; margin-top:9px;}
+.dx_ui_zt label{ background:#D2D2D2;}
+.dx_ui_time_selection .dx_ui_table div{ background:#D2D2D2; color:#fff; height:14px; width:14px; overflow:hidden; line-height:14px; text-align:center; display:inline-block;}
+.dx_ui_table .dx_ui_first_td input{ vertical-align:top; margin-top:5px;}
+.dx_ui_time_selection .dx_ui_table .selected{ background:#589DEE; color:#fff;}

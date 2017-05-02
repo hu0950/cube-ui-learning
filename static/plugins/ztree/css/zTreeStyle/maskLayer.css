@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+#mask_layer_pane {
+    background: #000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+	filter:alpha(opacity=30);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+}
+#mask_pop_tips{
+    background:#FFF;
+    border: 2px solid #2293D5;
+    display: none;
+    left: 50%;
+	top: 50%;
+    margin-left: -245px;
+    position: absolute;
+    width: 490px;
+    z-index: 1002;
+}
+.mask_pop_title{
+	background: url(../../images/t_bg.png) repeat-x;
+    font-size: 14px;
+    font-weight: 900;
+    height: 33px;
+    line-height: 33px;
+    position: relative;
+    text-align: center;
+}
+.mask_pop_title .f-right{
+    color: #046BF9;
+    font-weight: 400;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 10px;
+    padding-left: 15px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+#mask_add_s{
+	zoom: 1;
+	overflow: visible;
+}

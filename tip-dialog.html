@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select</title>
+    <!--#include file="/common/head.html"-->
+    <style>
+        .tip-style{
+            font-size: 13px;
+        }
+        .J_tipDialog .modal-title{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <a href="#followDialog" data-toggle="modal" data-id="1" class="J_confirmSolved">提醒</a>
+  <a href="#noIssueDialog" data-toggle="modal" data-id="1" class="J_noIssueDialog">非问题</a>
+  <!--Demo start-->
+  <!--<div class="modal fade J_tipDialog" tabindex="-1" role="dialog" id="tipDialog">-->
+      <!--<div class="modal-dialog" role="document">-->
+          <!--<div class="modal-content">-->
+              <!--<div class="modal-header">-->
+                  <!--<h4 class="modal-title">提醒提示框</h4>-->
+              <!--</div>-->
+              <!--<div class="modal-body">-->
+                  <!--<p>11111</p>-->
+              <!--</div>-->
+              <!--<div class="modal-footer didi-row">-->
+                  <!--<button type="button" class="didi-btn didi-btn-cancel dlg-btn" data-dismiss="modal">取消</button>-->
+                  <!--<button type="button" class="didi-btn didi-btn-highlight dlg-btn" data-dismiss="modal">确定</button>-->
+              <!--</div>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
+  <!--Demo end-->
+
+  <!--提醒提示框-->
+  <div class="modal fade J_tipDialog" tabindex="-1" role="dialog" id="tipDialog" data-save-id="">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">给<span class="J_sendPeople"></span>发送提醒</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="J_tip tip-style">
+                      <label>提醒方式：</label>
+                      <span class="checkboxItem">
+                          <input type="checkbox" value="1" id="mail" checked="checked">邮件
+                          <label for="mail"></label>
+                      </span>
+                      <span class="checkboxItem">
+                          <input type="checkbox" value="2" id="message">短信
+                          <label for="message"></label>
+                      </span>
+                  </div>
+              </div>
+              <div class="modal-footer didi-row">
+                  <button type="button" class="didi-btn didi-btn-cancel dlg-btn" data-dismiss="modal">取消</button>
+                  <button type="button" class="didi-btn didi-btn-highlight dlg-btn J_confirmTip" data-dismiss="modal">确定</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <!--solvedDialog-->
+      <div class="modal fade J_followDialog" tabindex="-1" role="dialog" id="followDialog" >
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">提示信息</h4>
+                  </div>
+                  <div class="modal-body clearfix" style="display: block;">
+                      <div class="solved-style">
+                          <div class="dialog-row">
+                              <label class="control-label pull-left" for="followMan">报警流转给：</label>
+                              <div class="col-sm-4">
+                                  <input class="didi-input input-full J_followMan" id="followMan" type="text" >
+                              </div>
+                              <label class="control-label pull-left" for="solvedModule">被流转人部门：</label>
+                              <div class="col-sm-4">
+                                  <input class="didi-input input-full J_followDptDig" id="followDpt" type="text" >
+                              </div>
+                          </div>
+                          <div class="dialog-row">
+                              <label class="control-label pull-left" for="followModule">流转到模块：</label>
+                              <div class="col-sm-4">
+                                  <select class="select-common-style J_followModuleDig" id="followModule">
+                                      <option value="0">请选择</option>
+                                      <option value="1">北极星</option>
+                                      <option value="2">通用报表</option>
+                                      <option value="3">邮件报表</option>
+                                      <option value="4">数据服务化</option>
+                                      <option value="5">数仓</option>
+                                      <option value="6">ETL</option>
+                                      <option value="7">FTP采集</option>
+                                      <option value="8">sqoop采集</option>
+                                      <option value="9">日志切割</option>
+                                      <option value="10">专快业务</option>
+                                      <option value="11">出租车业务</option>
+                                      <option value="12">顺风车业务</option>
+                                      <option value="13">代驾业务</option>
+                                      <option value="14">其他业务和服务</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="dialog-row">
+                              <label class="control-label pull-left" for="followReason">流转原因：</label>
+                              <div class="col-sm-12 clear-padding">
+                                  <textarea id="followReason" style="width: 100%;height: 80px;" class="J_followReason"></textarea>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="modal-footer didi-row">
+                      <!--不使用data-dismiss属性，避免无验证前提下自动关闭-->
+                      <button type="button" class="didi-btn didi-btn-cancel dlg-btn" data-dismiss="modal">取消</button>
+                      <button type="button" class="didi-btn didi-btn-highlight dlg-btn J_confirmFollow">确定</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+  <!--<div class="modal fade J_followDialog" tabindex="-1" role="dialog" id="followDialog">-->
+      <!--<div class="modal-dialog" role="document">-->
+          <!--<div class="modal-content">-->
+              <!--<div class="modal-header">-->
+                  <!--<h4 class="modal-title">提示信息</h4>-->
+              <!--</div>-->
+              <!--<div class="modal-body clearfix" style="display: block;">-->
+                  <!--<div class="solved-style">-->
+                      <!--<label class="control-label pull-left" for="followMan">报警流转给：</label>-->
+                      <!--<div class="col-sm-4">-->
+                          <!--<input class="didi-input input-full J_followMan" id="followMan" type="text" >-->
+                      <!--</div>-->
+                      <!--<label class="control-label pull-left" for="solvedModule">被流转人部门：</label>-->
+                      <!--<div class="col-sm-4">-->
+                          <!--<input class="didi-input input-full J_followDptDig" id="followDpt" type="text" >-->
+                      <!--</div>-->
+                      <!--<label class="control-label pull-left" for="followModule">流转到模块：</label>-->
+                      <!--<div class="col-sm-4">-->
+                          <!--<select class="select-common-style J_followModuleDig" id="followModule">-->
+                              <!--<option value="0">请选择</option>-->
+                              <!--<option value="1">北极星</option>-->
+                              <!--<option value="2">通用报表</option>-->
+                              <!--<option value="3">邮件报表</option>-->
+                              <!--<option value="4">数据服务化</option>-->
+                              <!--<option value="5">数仓</option>-->
+                              <!--<option value="6">ETL</option>-->
+                              <!--<option value="7">FTP采集</option>-->
+                              <!--<option value="8">sqoop采集</option>-->
+                              <!--<option value="9">日志切割</option>-->
+                              <!--<option value="10">专快业务</option>-->
+                              <!--<option value="11">出租车业务</option>-->
+                              <!--<option value="12">顺风车业务</option>-->
+                              <!--<option value="13">代驾业务</option>-->
+                              <!--<option value="14">其他业务和服务</option>-->
+                          <!--</select>-->
+                      <!--</div>-->
+                      <!--<label class="control-label pull-left" for="followReason">流转原因：</label>-->
+                      <!--<div class="col-sm-12 clear-padding">-->
+                          <!--<textarea id="followReason" style="width: 100%;height: 80px;" class="J_followReason"></textarea>-->
+                      <!--</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+              <!--<div class="modal-footer didi-row">-->
+                  <!--&lt;!&ndash;不使用data-dismiss属性，避免无验证前提下自动关闭&ndash;&gt;-->
+                  <!--<button type="button" class="didi-btn didi-btn-cancel dlg-btn" data-dismiss="modal">取消</button>-->
+                  <!--<button type="button" class="didi-btn didi-btn-highlight dlg-btn J_confirmFollow">确定</button>-->
+              <!--</div>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#followDialog").modal({backdrop: 'static', keyboard: false});
+    });
+    $(document).on('click', '.J_openTipDialog', function (e) {
+        var alarmId = $(e.target).attr("data-id");
+        console.log(alarmId);
+        $(".J_tipDialog").show();
+        $(".J_tipDialog").attr("data-save-id", alarmId);
+    });
+    $(document).on('click', '.J_confirmTip', function (e) {
+        var
+            tipValArr = [],
+            sendTipVal,
+            alarmId,
+            dialogEl = $(e.target).parents('.J_tipDialog'),
+            postData = {};
+
+//        tipWay = $('.J_tip').find('input').filter(function (item) {
+//            return $(item).prop('checked') == true;
+//        });
+////        console.log($('.J_tip').find('input'));
+//        console.log(tipWay);
+//
+        $($('.J_tip').find('input')).each(function (index, item) {
+            if($(item).prop("checked") == true){
+                tipValArr.push($(item).val());
+            }
+        });
+        //默认选邮件：邮件-1，短信-2
+        if(tipValArr.length != 0) {
+            sendTipVal = tipValArr.join(',');
+        }
+        alarmId = $(dialogEl).attr('data-save-id');
+        postData = {
+            "alarm_id": parseInt(alarmId),
+            "send_type": sendTipVal
+        };
+        console.log(postData);
+    });
+//    TODO:确定时判断是否已选了其一
+
+//    $(document).ready(function(){
+        $(document).on('click', '.J_confirmSolved', function () {
+            confirmSolved();
+        });
+        function confirmSolved() {
+            if($(".J_alarmReason").val() == ''){
+                $(".J_alarmReason").focus();
+            }else{
+                if($('.J_solvedModule').val() == ''){
+                    $(".J_solvedModule").focus();
+                }else{
+                    if($('.J_solvedPlan').val() == ''){
+                        $('.J_solvedPlan').focus();
+                    }else{
+                        console.log(11111);
+//                        $(".J_confirmSolved").attr('data-dismiss', 'modal');
+                        //手动关闭对话框
+                        $('.J_solvedDialog').modal('hide');
+                        clearDialogRecord($('.J_solvedDialog'));
+//                        sendAjax();
+                    }
+                }
+            }
+        }
+        function clearDialogRecord(dialogEl) {
+            var
+                selectEl = $(dialogEl).find('select'),
+                textareaEl = $(dialogEl).find('textarea');
+
+            if(textareaEl.length != 0){
+                $(textareaEl).each(function (index, item) {
+                    $(item).val("");
+                });
+            }
+            if(selectEl.length != 0){
+                $(selectEl).each(function (index, item) {
+                    $("option[value='0']", item).prop("selected", true);
+                });
+            }
+        }
+//    });
+
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,240 @@
+﻿@charset "utf-8";
+body { margin: 0; padding: 0; font-size: 12px; color: #000; }
+div { margin: 0; padding: 0; overflow: hidden; }
+.dialog_overall { text-align:center; width:100%; height: 100%; background: transparent url(../images/main_c_bg.jpg) repeat-x;}
+.dialog_main_c { text-align:center; width: 96%; height: 100%; overflow: auto; position: relative; }
+.button_dialog_main_c { text-align:center; width: 96%; height: 100%; overflow: auto; position: relative; }
+.dialog_main_form { width: 100%; font-size:12px; background-color: #D8D8D8; margin-top: 15px; margin-bottom: 10px; }
+.dialog_main_form tr td { background-color: #F8F8F8; line-height:30px; text-align: left; }
+.dialog_main_form input[type='text']{ background-color: #FFFFFF; border: 1px solid #5091BE; height: 22px; padding: 2px;}
+.dialog_tree_form { width: 100%; font-size:12px; margin-top: 10px; margin-bottom: 10px; text-align: left; }
+.dialog_main_list { width: 100%; font-size:12px; background-color: #BCDAEA; margin-top: 15px; margin-bottom: 10px; }
+.dialog_main_list .header { background-color: #308dbb; color: white; font-family: "微软雅黑", verdana, arial, helvetica, sans-serif; font-size:12px; font-weight: bold; padding: 4px 3px 3px 4px; }
+.dialog_main_list td { height: 20px; min-height: 20px; padding-left: 3px; padding-right: 3px; }
+.dialog_main_list .odd td, .dialog_tree_list .even td { vertical-align: middle; font-size: 12px; }
+.dialog_main_list .odd { background-color: #FFFFFF; }
+.dialog_main_list .even { background-color: #FAFAFA; }
+.dialog_main_list .odd_thick { background-color: #FFFFFF; line-height: 25px; }
+.dialog_main_list .even_thick { background-color: #F8F8F8; line-height: 25px; }
+.dialog-buttonpane { width: 100%; clear: both; text-align: left; }
+.dialog-buttonpane button { margin: .5em .5em .5em 0; color: #555555; font-size: 1em; border: 1px solid #5091BE; cursor: pointer; padding: .4em .3em .3em .3em; line-height: 1.0em; background-color: white; }
+.dialog-buttonpane button:HOVER { color: #212121; border: 1px solid #5091BE; }
+.dialog_msg_form { width: 60%; font-size:12px; background:#F8F8F8; margin-top: 10%; margin-bottom: 10px; border: 1px solid #BCDAEA; }
+.dialog_msg_form td { font-size:12px; color:#045581; line-height:22px; }
+.alert_msg { color: green; border: 1px solid green; background-color: #FFFFCC; font-size: 1.1em; line-height: 1.1em; text-align: center; padding: 10px 0px 10px 0px; position: absolute; line-height: 25px; width: 40%; top: 40%; left: 30%; z-index: 9999; }
+.alert_error { color: red; border: 1px solid red; background-color: #FFFFCC; font-size: 1.1em; line-height: 1.1em; text-align: center; padding: 10px 0px 10px 0px; position: absolute; line-height: 25px; width: 40%; top: 40%; left: 30%; z-index: 9999; }
+
+.button_s { font-size: 12px; color: #003964; border: #5091BE 1px solid; height: 22px; padding-left: 5px; padding-right: 5px; cursor: pointer; background:url(../images/button_bg_s.gif) bottom repeat-x; }
+.button_s_hover { font-size: 12px; color: #003999; border: #FFD67F 1px solid; height: 22px; padding-left: 5px; padding-right: 5px; cursor: pointer; background: #FFFFFF url(../images/bg1.gif) -25 -98 repeat-x; }
+
+a.a_button_f { text-decoration: underline; font-size: 12px; color: #045581; height: 18px; line-height: 18px; padding: 1px 5px 0px 5px; cursor: pointer; }
+a.a_button_f:HOVER { text-decoration: underline; font-size: 12px; color: #045581; height: 18px; line-height: 18px; padding: 1px 5px 0px 5px; cursor: pointer;border: #5091BE 1px solid; }
+a.a_button_img { text-decoration: none; font-size: 12px; padding: 1px; cursor: pointer; }
+a.a_button_img:HOVER { text-decoration: none; font-size: 12px; padding: 1px; cursor: pointer; border: #5091BE 1px solid; }
+
+input.readonly { color: #666; border: #666 1px solid; }
+img { border: none; }
+.blue { font-size:12px; color:#045581; font-weight:bold; }
+.a_blue { font-size:12px; color:#045581; text-decoration:none; }
+.a_blue:hover { font-size:12px; color:#ff0000; text-decoration:underline; }
+.hand-cursor{ cursor: pointer;}
+
+
+/** 表单table样式 */
+.mainForm {
+	line-height: 20px;
+	background-color: #e5e5e5; /*bad3ec*/
+}
+
+.mainForm .left {
+	color: #333;
+	width: 20%;
+	height: 25px;
+	padding-left: 5px;
+	vertical-align: top;
+	background-color: #F8FBFE;
+	/*border-bottom: 1px solid #bad3ec;
+	border-right: 1px solid #bad3ec;*/
+}
+
+.mainForm .right {
+	width: 80%;
+	height: 25px;
+	padding-left: 5px;
+	vertical-align: middle;
+	background-color: #F8FBFE;
+	/*border-bottom: 1px solid #bad3ec;
+	border-right: 1px solid #bad3ec;*/
+}
+
+/** 表单table样式 结束*/ 
+/** 输入框样式 */
+.txt {
+	border: 1px solid #BEBEBE;
+	background-color: #fff;
+	height: 20px;
+	line-height: 16px;
+	padding: 1px 0px 0px 2px;
+	font-size: 12px;
+	width: 150px;
+	font-family: verdana, Arial, Helvetica, sans-serif;
+}
+
+.txt {
+	background: #F7FCFF;
+}
+
+.txtOnF {
+	background: #FFFFD8;
+}
+
+textarea.txt {
+	width: 50%;
+	height: 75px;
+	margin: 2px 0 2px 0;
+}
+
+/** 输入框样式 结束*/
+/** 按钮样式 */
+.Btn {
+	cursor: pointer;
+	cursor: hand;
+	color: #555;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-align: left;
+	padding-left: 24px;
+	padding-top: 2px;
+}
+
+.BtnDw {
+	padding-left: 2px;
+	padding-top: 2px;
+}
+
+.SubmitBtn {
+	background: url("../images/btn_submit.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+}
+
+.SubmitBtnHv {
+	background: url("../images/btn_submit_hv.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+	color: #222;
+}
+
+.AddBtn {
+	background: url("../images/btn_add.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+}
+
+.AddBtnHv {
+	background: url("../images/btn_add_hv.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+	color: #222;
+}
+
+.ReturnBtn {
+	background: url("../images/btn_return.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+}
+
+.ReturnBtnHv {
+	background: url("../images/btn_return_hv.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+	color: #222;
+}
+
+.ResetBtn {
+	background: url("../images/btn_reset.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+}
+
+.ResetBtnHv {
+	background: url("../images/btn_reset_hv.gif") no-repeat;
+	border: none;
+	width: 62px;
+	height: 26px;
+	color: #222;
+}
+
+.CommBtn {
+	cursor: pointer;
+	cursor: hand;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding-top: 2px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+.twBtn {
+	border: 1px solid #477ab9;
+	color: #555;
+	background: #fafafa;
+	letter-spacing: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.twBtnHv {
+	border: 1px solid #0a0;
+	color: #111;
+	background: #F7FCFF;
+	letter-spacing: 4px;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.fwBtn {
+	border: 1px solid #477ab9;
+	color: #555;
+	background: #fafafa;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.fwBtnHv {
+	border: 1px solid #0a0;
+	color: #111;
+	background: #F7FCFF;
+	letter-spacing: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.MiniBtn {
+	border: 1px solid #477ab9;
+	background: #fcfcfc;
+	font-size: 12px;
+	color: #666;
+	height: 18px;
+	line-height: 16px;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+.MiniBtnHv {
+	border: 1px solid #0a0;
+	background: #F7FCFF;
+	font-size: 12px;
+	color: #111;
+	height: 18px;
+	line-height: 16px;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+/** 按钮样式 结束*/
