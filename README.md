@@ -24,3 +24,16 @@
   </div>
 </template>
 ```
+
+```js
+import Vue from 'vue'
+import {
+  /* eslint-disable no-unused-vars */
+  Style,
+  Button,
+  ActionSheet
+} from 'cube-ui'
+
+Vue.use(Button)
+Vue.use(ActionSheet)
+```
