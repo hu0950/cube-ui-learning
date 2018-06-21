@@ -102,6 +102,7 @@ export default {
 
 
 >toolbar/toolbar-item.vue
+
 根据action的type值判断是否需要显示checkbox
 ```
 <li class="cube-toolbar-item border-right-1px">
